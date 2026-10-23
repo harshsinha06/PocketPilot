@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --text-xs: 13px;
+  --text-sm: 15px;
+  --text-base: 17px;
+  --text-lg: 19px;
+  --text-xl: 21px;
+  --text-2xl: 25px;
+  --text-3xl: 31px;
+  --text-4xl: 37px;
+  --text-5xl: 49px;
+  --text-6xl: 61px;
+  --text-7xl: 73px;
+  --text-8xl: 97px;
+  --text-9xl: 129px;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --canvas: #f5f5f4;
+  --ink: #1c1917;
+  --card: #ffffff;
+  --line: #e7e5e4;
+  --chart-ink: #44403c;
+  --chart-grid: #e7e5e4;
+  --chart-1: #065f46;
+  --chart-2: #57534e;
+  --chart-3: #b45309;
+  --chart-4: #1e3a8a;
+  --chart-5: #9f1239;
+}
+
+.dark {
+  color-scheme: dark;
+  --canvas: #1c1917;
+  --ink: #fafaf9;
+  --card: #292524;
+  --line: #44403c;
+  --chart-ink: #d6d3d1;
+  --chart-grid: #44403c;
+  --chart-1: #6ee7b7;
+  --chart-2: #d6d3d1;
+  --chart-3: #fbbf24;
+  --chart-4: #93c5fd;
+  --chart-5: #fda4af;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.headline-accent {
+  background: linear-gradient(90deg, #047857 0%, #065f46 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .headline-accent {
+  background: linear-gradient(90deg, #6ee7b7 0%, #ecfdf5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
